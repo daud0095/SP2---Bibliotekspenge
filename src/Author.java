@@ -19,9 +19,10 @@ public class Author {
     public double calculateRoyalties(){
         double total = 0;
         for(Title t : titles){
+            System.out.println(t.getTitle() + ": " + t.calculatePoints() + " point");
             total += t.calculateRoyalty();
         }
-        return Math.round(total + 100.0) / 100.0; // Afrunder til 2 decimaler
+        return Math.round(total * 100.0) / 100.0; // Afrunder til 2 decimaler
     }
 
 

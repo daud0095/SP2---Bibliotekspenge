@@ -14,6 +14,10 @@ public abstract class Title {
        return calculatePoints() * RATE;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public double convertLiteratureType(){
         switch (literatureType){
             case "BI": return 3.0;
@@ -24,5 +28,7 @@ public abstract class Title {
             default: return 1.0;
         }
     }
+
+
 
 }

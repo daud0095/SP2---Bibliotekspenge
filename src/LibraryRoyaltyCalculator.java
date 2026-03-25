@@ -7,6 +7,7 @@ public class LibraryRoyaltyCalculator {
         daniel.addTitle(new AudioBook("POOR", "SKØN", 120, 210));
         daniel.addTitle(new PrintBook("KingKong", "TE", 101, 40));
 
+
         System.out.println(daniel.getName() + ": " + daniel.calculateRoyalties() + "kr");
     }
 
