@@ -1,11 +1,14 @@
-public class AudioBook extends Title{
+public class AudioBook extends PhysicalTitle implements IAudioBook{
     private int durationInMinutes;
-    private int copies;
+
 
     public AudioBook(String title, String literatureType, int copies, int durationInMinutes){
-        super(title, literatureType);
+        super(title, literatureType, copies);
         this.durationInMinutes = durationInMinutes;
-        this.copies = copies;
+    }
+
+    public int getDurationInMinutes(){
+        return durationInMinutes;
     }
 
     @Override

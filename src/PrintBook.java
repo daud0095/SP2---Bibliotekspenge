@@ -1,15 +1,13 @@
-public class PrintBook extends Title{
+public class PrintBook extends PhysicalTitle{
     private int pages;
-    private int copies;
 
     public PrintBook(String title, String literatureType, int copies, int pages){
-        super(title, literatureType);
+        super(title, literatureType, copies);
         this.pages = pages;
-        this.copies = copies;
     }
 
     @Override
     public double calculatePoints() {
-        return pages * convertLiteratureType() * copies;
+        return pages * convertLiteratureType() * getCopies();
     }
 }
